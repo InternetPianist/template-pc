@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "vue.volar",
+    "vue.vscode-typescript-vue-plugin",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "hollowtree.vue-snippets",
+    "stylelint.vscode-stylelint",
+    "esbenp.prettier-vscode",
+    "mikestead.dotenv"
+  ]
+}
