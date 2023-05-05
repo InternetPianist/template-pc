@@ -1,4 +1,5 @@
 import { ConfigEnv, defineConfig, loadEnv, UserConfig } from 'vite';
+import { resolve } from 'path';
 import { createVitePlugins } from './build/plugins';
 import { wrapperEnv } from './build/getEnv';
 import { createProxy } from './build/proxy';
@@ -15,6 +16,12 @@ export default defineConfig(({ command, mode }: ConfigEnv): UserConfig => {
   return {
     base: VITE_PUBLIC_PATH,
     root,
+    resolve: {
+      alias: {
+        '@': resolve(__dirname, './src'),
+        'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js',
+      },
+    },
     server: {
       host: true,
       port: VITE_PORT,
