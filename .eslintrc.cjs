@@ -25,6 +25,7 @@ module.exports = {
     'prefer-const': 'off', // 使用 let 关键字声明但在初始分配后从未重新分配的变量，要求使用 const
     'no-use-before-define': 'off', // 禁止在 函数/类/变量 定义之前使用它们
     'no-irregular-whitespace': 'off', // 禁止不规则的空白
+    'no-useless-escape': 'off', // 禁止不必要的转义字符
 
     // typeScript (https://typescript-eslint.io/rules)
     '@typescript-eslint/no-unused-vars': 'error', // 禁止定义未使用的变量
