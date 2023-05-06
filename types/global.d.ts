@@ -1,6 +1,28 @@
+/* Menu */
+declare namespace Menu {
+  interface MenuOptions {
+    path: string;
+    name: string;
+    component?: string | (() => Promise<unknown>);
+    redirect?: string;
+    meta: MetaProps;
+    children?: MenuOptions[];
+  }
+  interface MetaProps {
+    icon: string;
+    title: string;
+    activeMenu?: string;
+    isLink?: string;
+    isHide: boolean;
+    isFull: boolean;
+    isAffix: boolean;
+    isKeepAlive: boolean;
+  }
+}
 /* Vite */
 declare type Recordable<T = any> = Record<string, T>;
 
+// ViteEnv
 declare interface ViteEnv {
   VITE_USER_NODE_ENV: 'development' | 'production' | 'test';
   VITE_GLOB_APP_TITLE: string;
